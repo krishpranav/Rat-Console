@@ -220,7 +220,7 @@ class PULL:
         ]
         print(tabulate.tabulate(lister, headers=headers))
         sys.stdout.write("\n")
-
+    
     def help_c_sysinfo(self):
         sys.stdout.write("\n")
         print("Info       : Gathers system information!")
