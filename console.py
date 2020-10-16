@@ -450,4 +450,4 @@ class COMMCENTER:
             if result.strip(" "):
                 print(result)
         else:
-            pull.error("You need to connect before execute this command!")
+            pull.error("You need to connect before execute this command")
