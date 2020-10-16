@@ -180,9 +180,9 @@ class PULL:
 
     def help_c_disconnect(self):
         sys.stdout.write("\n")
-        print("Info       : Disconnect current session!")
-        print("Arguments  : None")
-        print("Example    : \n")
+        print("Info          :  Disconnect current session!")
+        print("Arguments     : None")
+        print("Example       : \n")
         print("$ disconnect")
         sys.stdout.write("\n")
 
