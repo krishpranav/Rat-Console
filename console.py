@@ -1,4 +1,6 @@
 #!usr/bin/env/python
+
+#imports
 import sys
 import os
 import socket
@@ -254,7 +256,7 @@ pull = PULL()
 
 class CLIENT:
 
-    STATUS = "Active"
+    STATUS  = "Active"
     MESSAGE = ""
     KEY     = ")J@NcRfU"
 
