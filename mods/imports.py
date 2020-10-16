@@ -1,11 +1,10 @@
+#common imports
 import sys
 import os
 import socket
 import time
 import base64
-import os
 import tabulate
-import signal
 import shlex
 import platform
 import io
