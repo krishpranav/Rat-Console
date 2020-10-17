@@ -139,7 +139,7 @@ class PULL:
             ('keylogger', 'KeyLogger Module'),
             ('sysinfo', 'Dump System, Processor, CPU and Network Information'),
             ('screenshot', 'Take Screenshot on Target Machine and Save on Local'),
-            ('exit', 'Exit from RAT!')
+            ('exit', 'Exit from Console-Rat!')
         ]
         sys.stdout.write("\n")
         print(tabulate.tabulate(lister, headers=headers))
@@ -153,7 +153,7 @@ class PULL:
             ('connect', 'Connect to a Specific Client'),
             ('disconnect', 'Disconnect from Current Client'),
             ('clear', 'Clear Screen'),
-            ('exit', 'Exit from RAT!')
+            ('exit', 'Exit from Console-Rat!')
         ]
         sys.stdout.write("\n")
         print(tabulate.tabulate(lister, headers=headers))
@@ -308,7 +308,7 @@ class COMMCENTER:
 
     CLIENTS = []
     COUNTER = 0
-    CURRENT = ()    #### Current Target Client ####
+    CURRENT = ()    
     KEYLOGS = []
 
     def c_help(self, vals):
@@ -397,10 +397,10 @@ class COMMCENTER:
                             print(result)
                     else:
                         break
-        else:
-            sys.stdout.write("\n")
-            pull.error("You need to connect before execute this command!")
-            sys.stdout.write("\n")
+            else:
+                sys.stdout.write("\n")
+                pull.error("You need to connect before execute this command!")
+                sys.stdout.write("\n")
 
 
     def c_clear(self):
