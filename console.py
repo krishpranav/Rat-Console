@@ -361,7 +361,6 @@ class COMMCENTER:
             pull.error("Invalid Syntax!")
             sys.stdout.write("\n")
 
-
     def c_disconnect(self):
         self.CURRENT = ()
 
