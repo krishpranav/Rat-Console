@@ -391,13 +391,14 @@ class COMMCENTER:
                         self.CURRENT[1].send_data(val)
                         result = self.CURRENT[1].recv_data()
                         if result.strip(" "):
-                          print(result)
+                            print(result)
                     else:
                         break
         else:
             sys.stdout.write("\n")
             pull.error("You need to connect before execute this command!")
             sys.stdout.write("\n")
+
 
     def c_clear(self):
         subprocess.call(["clear"], shell=True)
