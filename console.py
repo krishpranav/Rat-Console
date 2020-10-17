@@ -344,6 +344,7 @@ class COMMCENTER:
     def c_ping(self, _id):
         return
 
+
     def c_connect(self, args):
         if len(args) == 2:
             tgt = self.get_valid(args[1])
