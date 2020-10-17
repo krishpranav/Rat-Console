@@ -334,6 +334,8 @@ class COMMCENTER:
             else:
                 pull.help_c_general()
 
+
+
     def get_valid(self, _id):
         for client in self.CLIENTS:
             if client[0] == int(_id):
@@ -344,7 +346,6 @@ class COMMCENTER:
     def c_ping(self, _id):
         return
 
-
     def c_connect(self, args):
         if len(args) == 2:
             tgt = self.get_valid(args[1])
@@ -354,7 +355,7 @@ class COMMCENTER:
                 sys.stdout.write("\n")
                 pull.error("No client is associated with that ID")
                 sys.stdout.write("\n")
-        
+
         else:
             sys.stdout.write("\n")
             pull.error("Invalid Syntax!")
