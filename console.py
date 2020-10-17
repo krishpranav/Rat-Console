@@ -85,7 +85,7 @@ class PULL:
     def support_colors(self):
         plat = sys.platform
         supported_platform = plat != 'Pocket PC' and (plat != 'win32' or \
-														'ANSICON' in os.environ)
+                                                        'ANSICON' in os.environ)
         is_a_tty = hasattr(sys.stdout, 'isatty') and sys.stdout.isatty()
         if not supported_platform or not is_a_tty:
             return False
