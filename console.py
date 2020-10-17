@@ -443,6 +443,7 @@ class COMMCENTER:
         else:
             pull.error("You need to connect before execute this command!")
 
+
     def c_sysinfo(self):
         if self.CURRENT:
             self.CURRENT[1].send_data("sysinfo:")
