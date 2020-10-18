@@ -398,10 +398,11 @@ class COMMCENTER:
                             print(result)
                     else:
                         break
-            else:
-                sys.stdout.write("\n")
-                pull.error("You need to connect before execute this command!")
-                sys.stdout.write("\n")
+
+        else:
+            sys.stdout.write("\n")
+            pull.error("You need to connect before execute this command")
+            sys.stdout.write("\n")
 
 
     def c_clear(self):
