@@ -79,7 +79,7 @@ class PULL:
     LINEUP = '\033[F'
 
     def __init__(self):
-        if not self.support_colors:
+        if not self.support_colors():
             self.win_colors()
 
     def support_colors(self):
