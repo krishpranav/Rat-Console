@@ -163,6 +163,7 @@ class PULL:
         sys.stdout.write("\n")
         print("Info       : Display connected sessions to the server!")
         print("Arguments  : None")
+        print("Arguments  : None")
         print("Example    : \n")
         print("$ sessions")
         sys.stdout.write("\n")
