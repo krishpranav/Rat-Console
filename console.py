@@ -356,10 +356,9 @@ class COMMCENTER:
                 sys.stdout.write("\n")
                 pull.error("No client is associated with that ID")
                 sys.stdout.write("\n")
-
         else:
             sys.stdout.write("\n")
-            pull.error("Invalid Syntax!")
+            pull.error("Invalid Syntax!!")
             sys.stdout.write("\n")
 
     def c_disconnect(self):
