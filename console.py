@@ -205,7 +205,6 @@ class PULL:
         print("$ shell")
         sys.stdout.write("\n")
 
-
     def help_c_keylogger(self):
         sys.stdout.write("\n")
         print("Info       : Keylogger Module!")
@@ -215,14 +214,14 @@ class PULL:
         print("$ keylogger off")
         print("$ keylogger dump\n")
         headers = (pull.BOLD + 'Argument' + pull.END, pull.BOLD + 'Description' + pull.END)
-        lister  = [
+        lister = [
             ('on', 'Turn Keylogger on'),
             ('off', 'Turn Keylogger off'),
             ('dump', 'Dump keylogs')
         ]
         print(tabulate.tabulate(lister, headers=headers))
         sys.stdout.write("\n")
-    
+
     def help_c_sysinfo(self):
         sys.stdout.write("\n")
         print("Info       : Gathers system information!")
