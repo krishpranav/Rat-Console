@@ -22,7 +22,7 @@ __LOGO__ = """
          %s RAT 
 """
 
-__HELP_OVERALL__ = """usage: python3 server.py command [--help] [--option OPTION]
+__HELP_OVERALL__ = """usage: python3 console.py command [--help] [--option OPTION]
 
 These are the commands available for usage:
 
