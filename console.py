@@ -403,7 +403,6 @@ class COMMCENTER:
             pull.error("You need to connect before execute this command")
             sys.stdout.write("\n")
 
-
     def c_clear(self):
         subprocess.call(["clear"], shell=True)
 
