@@ -282,8 +282,9 @@ class CLIENT:
                 except UnicodeDecodeError:
                     self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8'))
                 if not self.MESSAGE:
-                    self.MESSAGE = " "
+                    self.MESSAGE = ""
                 data = ""
+
                     
 
     def engage(self):
