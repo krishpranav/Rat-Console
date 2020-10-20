@@ -466,8 +466,8 @@ class COMMCENTER:
             dirname = os.path.join( dirname, '%s' % (self.CURRENT[1].ip) )
             if not os.path.isdir(dirname):
                 os.mkdir(dirname)
-            fullpath = os.path.join( dirname, datetime.now().strftime("%d-%m-%Y %H:%M:%S.png") )
-            fl = open( fullpath, 'wb' )
+            fullpath = os.path.join(dirname, datetime.now().strftime("%d-%m-%Y %H:%M:%S.png"))
+            fl = open( fullpath, 'wb')
             fl.write( result )
             fl.close()
             pull.print("Saved: [" + pull.DARKCYAN + fullpath + pull.END + "]")
