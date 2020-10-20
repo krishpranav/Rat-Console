@@ -346,7 +346,6 @@ class COMMCENTER:
     def c_ping(self, _id):
         return
 
-
     def c_connect(self, args):
         if len(args) == 2:
             tgt = self.get_valid(args[1])
@@ -358,7 +357,7 @@ class COMMCENTER:
                 sys.stdout.write("\n")
         else:
             sys.stdout.write("\n")
-            pull.error("Invalid Syntax!!")
+            pull.error("Invalid Syntax")
             sys.stdout.write("\n")
 
     def c_disconnect(self):
