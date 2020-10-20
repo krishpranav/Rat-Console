@@ -472,4 +472,4 @@ class COMMCENTER:
             fl.close()
             pull.print("Saved: [" + pull.DARKCYAN + fullpath + pull.END + "]")
         else:
-            pull.error("You need to connect before execute this command!")
+            pull.error("You need to connect to client before execute this command")
