@@ -1,4 +1,7 @@
 #!usr/bin/env/python
+#a python rat 
+#note this tool is under development
+
 
 #imports
 import sys
