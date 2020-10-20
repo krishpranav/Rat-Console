@@ -9,7 +9,6 @@ import shlex
 import platform
 import io
 import psutil
-import subprocess
 import threading
 import pyscreenshot
 from datetime import datetime
