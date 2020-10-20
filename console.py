@@ -2,16 +2,14 @@
 #a python rat 
 #note this tool is under development
 
-
-#imports
 import sys
 import os
 import socket
 import time
-import base64
+import base64       
 import tabulate
 import signal
-import subprocess
+import subprocess           #imports
 import argparse
 import shutil
 import threading
