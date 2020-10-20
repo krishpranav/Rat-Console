@@ -263,9 +263,9 @@ class CLIENT:
     KEY     = ")J@NcRfU"
 
     def __init__(self, sock, addr):
-        self.sock    = sock
-        self.ip      = addr[0]
-        self.port    = addr[1]
+        self.sock     = sock
+        self.ip       = addr[0]
+        self.port     = addr[1]
 
     def acceptor(self):
         data = ""
@@ -294,7 +294,6 @@ class CLIENT:
 
     def send_data(self, val):
         self.sock.send(base64.encodebytes(val.encode('utf-8')) + self.KEY.encode('utf-8'))
-
 
     def recv_data(self):
         while not self.MESSAGE:
