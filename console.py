@@ -1,6 +1,11 @@
 #!usr/bin/env/python
-#a python rat 
-#note this tool is under development
+'''
+A python rat
+Note this tool is under development
+github link: https://www.github.com/krishpranav
+follow me on github :)
+
+'''
 
 import sys
 import os
