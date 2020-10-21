@@ -87,7 +87,7 @@ class PULL:
     def __init__(self):
         if not self.support_colors():
             self.win_colors()
-
+            
     def support_colors(self):
         plat = sys.platform
         supported_platform = plat != 'Pocket PC' and (plat != 'win32' or \
@@ -351,7 +351,7 @@ class COMMCENTER:
 
     def c_ping(self, _id):
         return
-        
+
     def c_connect(self, args):
         if len(args) == 2:
             tgt = self.get_valid(args[1])
