@@ -11,10 +11,10 @@ import sys
 import os
 import socket
 import time
-import base64       
+import base64
 import tabulate
-import signal
-import subprocess           #imports
+import signal 
+import subprocess
 import argparse
 import shutil
 import threading
