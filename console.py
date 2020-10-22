@@ -477,3 +477,8 @@ class COMMCENTER:
             pull.print("Saved: [" + pull.DARKCYAN + fullpath + pull.END + "]")
         else:
             pull.error("You need to connect to client before execute this command")
+    
+    def c_exit(self):
+        sys.stdout.write("\n")
+        pull.exit("Exiting...\n")
+
