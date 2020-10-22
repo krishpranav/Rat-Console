@@ -482,3 +482,11 @@ class COMMCENTER:
         sys.stdout.write("\n")
         pull.exit("Exiting...\n")
 
+class INTERFACE(COMMCENTER):
+
+    SOCKET = None
+    RUNNER = True
+
+    def __init__(self, prs):
+        self.address = prs.address
+        self.port    = prs.port
