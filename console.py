@@ -388,7 +388,7 @@ class COMMCENTER:
     def c_shell(self):
         result = ""
         if self.CURRENT:
-            sys.stdout.write("\n")
+            sys.stdout.write("\n")`                                                                                                                                 -                                                                                                                           
             while True:
                 val = input("# ")
                 val = "shell:" + val.rstrip(" ").lstrip(" ")
@@ -482,11 +482,21 @@ class COMMCENTER:
         sys.stdout.write("\n")
         pull.exit("Exiting...\n")
 
+# class INTERFACE(COMMCENTER):
+
+#     SOCKET = None
+#     RUNNER = True
+
+#     def __init__(self, prs):
+#         self.address = prs.address
+#         self.port    = prs.port
+
 class INTERFACE(COMMCENTER):
 
+    
     SOCKET = None
     RUNNER = True
 
     def __init__(self, prs):
         self.address = prs.address
-        self.port    = prs.port
+        self.port = prs.port
