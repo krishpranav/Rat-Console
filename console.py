@@ -491,3 +491,19 @@ class INTERFACE(COMMCENTER):
     def __init__(self, prs):
         self.address = prs.address
         self.port = prs.port
+
+    def bind(self):
+        self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        try:
+            self.SOCKET.bind((self.address, self,port))
+            pull.print("Successfully Bind To %s%s:%i" % (
+                pull.RED,
+                self.address,
+                self.port,
+            ))
+        except Exception as e:
+            pull.exit("Unable to bind to %s%s:%i" % (
+                pull.RED,
+                self.address,
+                self.port,
+            ))
