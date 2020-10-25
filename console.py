@@ -507,3 +507,19 @@ class INTERFACE(COMMCENTER):
                 self.address,
                 self.port,
             ))
+
+    def accept_threads(self):
+        self.SOCKET.listen(10)
+
+        while self.RUNNER:
+            conn, addr = self.SOCKET.accept()
+            is_valid = True
+
+            self.COUNTER += 1
+            client = CLIENT(conn, addr)
+            client.engage()
+
+            self.CLIENTS.append(
+                self.COUNTER,
+                client
+            )
