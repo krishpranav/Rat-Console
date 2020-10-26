@@ -1,6 +1,5 @@
 #common imports
 import sys
-import os
 import socket
 import time
 import base64
