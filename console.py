@@ -528,3 +528,13 @@ class INTERFACE(COMMCENTER):
         t = threading.Thread(target=self.accept_threads)
         t.daemon = True
         t.start()
+
+    def execute(self, vals):
+        if vals:
+            if vals[0] == "exit":
+                self.c_exit()
+            elif vals[0] == "help":
+                self.c_help(vals)
+            elif vals[0] == "sessions":
+                self.c_sessions()
+            
