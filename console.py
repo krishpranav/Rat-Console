@@ -553,3 +553,10 @@ class INTERFACE(COMMCENTER):
                 self.c_sysinfo()
             elif vals[0] == "screenshot":
                 self.c_screenshot()
+
+    def launch(self):
+        pull.print("Launching Interface Enter 'help' to get avaible commands! \n")
+
+        while True:
+            val = pull.get_com(self.CURRENT)
+            self.execute(val.split(" "))
