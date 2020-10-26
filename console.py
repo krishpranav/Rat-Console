@@ -560,3 +560,6 @@ class INTERFACE(COMMCENTER):
         while True:
             val = pull.get_com(self.CURRENT)
             self.execute(val.split(" "))
+
+    def close(self):
+        self.SOCKET.close()
