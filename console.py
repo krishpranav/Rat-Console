@@ -555,11 +555,11 @@ class INTERFACE(COMMCENTER):
                 self.c_screenshot()
 
     def launch(self):
-        pull.print("Launching Interface Enter 'help' to get avaible commands! \n")
+        pull.print("Lauching Interface Enter 'help' to get available commands! \n")
 
         while True:
             val = pull.get_com(self.CURRENT)
             self.execute(val.split(" "))
-
+    
     def close(self):
         self.SOCKET.close()
