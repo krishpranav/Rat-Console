@@ -598,4 +598,24 @@ class GENERATOR:
         self.v_client  = self.get_client()
         self.v_main    = self.get_main()
 
+    def get_output(self, out):
+        rtval = ""
+        if self.source:
+            if not out.endswith(".py"):
+                rtval = (out + ".py")
+            else:
+                rtval = out
+        else:
+            if platform.system() == "Windows":
+                if not out.endswith(".exe"):
+                    rtval = (out + ".exe")
+                else:
+                    rtval = out
+            elif platform.system() == "Linux":
+                rtval = (out)
+            else:
+                pull.exit("Unrecognized Platform")
+
+        return rtval
+
 
