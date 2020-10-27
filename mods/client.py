@@ -60,7 +60,6 @@ class CLIENT:
 
         if data[0] == "shell":
 
-            #print("Executing Shell: " + data[1])
             toexecute = data[1].rstrip(" ").lstrip(" ")
             toexecute = " ".join(toexecute.split())
             if toexecute.split(" ")[0] == "cd":
