@@ -273,6 +273,25 @@ class CLIENT:
         self.ip       = addr[0]
         self.port     = addr[1]
 
+    # def acceptor(self):
+    #     data = ""
+    #     chunk = ""
+
+    #     while True:
+    #         chunk = self.sock.recv(4096)
+    #         if not chunk:
+    #             self.STATUS = "Disconnected"
+    #             break
+    #         data += chunk.decode('utf-8')
+    #         if self.KEY.encode('utf-8') in chunk:
+    #             try:
+    #                 self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8')).decode('utf-8')
+    #             except UnicodeDecodeError:
+    #                 self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8'))
+    #             if not self.MESSAGE:
+    #                 self.MESSAGE = ""
+    #             data = ""
+
     def acceptor(self):
         data = ""
         chunk = ""
@@ -285,12 +304,7 @@ class CLIENT:
             data += chunk.decode('utf-8')
             if self.KEY.encode('utf-8') in chunk:
                 try:
-                    self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8')).decode('utf-8')
-                except UnicodeDecodeError:
-                    self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8'))
-                if not self.MESSAGE:
-                    self.MESSAGE = ""
-                data = ""
+                    
 
 
     def engage(self):
@@ -563,3 +577,10 @@ class INTERFACE(COMMCENTER):
     
     def close(self):
         self.SOCKET.close()
+
+class GENERATOR:
+
+    data = ""
+    flname = ""
+
+    
