@@ -242,7 +242,7 @@ class PULL:
         print("Arguments  : None")
         print("Example    : \n")
         print("$ screenshot")
-        sys.stdout.write("\n")
+        sys.stdout.write("\n")          
 
     def help_overall(self):
         global __HELP_OVERALL__
@@ -555,7 +555,7 @@ class INTERFACE(COMMCENTER):
         while True:
             val = pull.get_com(self.CURRENT)
             self.execute(val.split(" "))
-    
+
     def close(self):
         self.SOCKET.close()
 
@@ -598,5 +598,7 @@ class GENERATOR:
                 pull.exit("Unrecognized Platform")
 
         return rtval
+
+
 
 
