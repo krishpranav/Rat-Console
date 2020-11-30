@@ -477,7 +477,7 @@ class COMMCENTER:
         sys.stdout.write("\n")
         pull.exit("Exiting...\n")
 
-class INTERFACE(COMMCENTER):
+class INTERFACE(COMMCENTER):    
 
     
     SOCKET = None
