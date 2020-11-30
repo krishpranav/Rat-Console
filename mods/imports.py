@@ -1,4 +1,4 @@
-#common imports
+#imports
 import os
 import sys
 import socket
