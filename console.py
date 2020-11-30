@@ -598,8 +598,7 @@ class GENERATOR:
                 pull.exit("Unrecognized Platform")
 
         return rtval
-    
-    
+
     def get_path(self):
         dirname = os.path.dirname(__file__)
         dirname = os.path.join(dirname, 'mods')
@@ -612,10 +611,8 @@ class GENERATOR:
         topen = os.path.join(self.pather, 'imports.py')
         fl = open(topen)
         data = fl.read()
-        data = fl.read()
         fl.close()
-        return data
-    
+        return data   
     
 
 
