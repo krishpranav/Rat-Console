@@ -608,6 +608,15 @@ class GENERATOR:
         else:
             pull.exit("File missing to generate the payload")
     
+    def get_imports(self):
+        topen = os.path.join(self.pather, 'imports.py')
+        fl = open(topen)
+        data = fl.read()
+        data = fl.read()
+        fl.close()
+        return data
+    
+    
 
 
 
