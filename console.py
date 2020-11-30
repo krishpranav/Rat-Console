@@ -612,7 +612,7 @@ class GENERATOR:
         fl = open(topen)
         data = fl.read()
         fl.close()
-        return data   
+        return data
     
 
 
