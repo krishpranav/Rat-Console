@@ -598,6 +598,16 @@ class GENERATOR:
                 pull.exit("Unrecognized Platform")
 
         return rtval
+    
+    
+    def get_path(self):
+        dirname = os.path.dirname(__file__)
+        dirname = os.path.join(dirname, 'mods')
+        if os.path.isdir(dirname):
+            return dirname
+        else:
+            pull.exit("File missing to generate the payload")
+    
 
 
 
