@@ -632,6 +632,13 @@ class GENERATOR:
         fl.close()
         return data
     
+    def get_screenshot(self):
+        topen = os.path.join(self.pather, 'screenshot.py')
+        fl = open(topen)
+        data = fl.read()
+        fl.close()
+        return data
+    
     
 
 
