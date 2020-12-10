@@ -625,6 +625,13 @@ class GENERATOR:
         fl.close()
         return data
     
+    def get_sysinfo(self):
+        topen = os.path.join(self.pather, 'sysinfo.py')
+        fl = open(topen)
+        data = fl.read()
+        fl.close()
+        return data
+    
     
 
 
