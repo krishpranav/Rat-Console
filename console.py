@@ -618,6 +618,13 @@ class GENERATOR:
         data = "CONSTIP = \"%s\"\nCONSTPT = %i" % (self.address, self.port)
         return data
     
+    def get_persistence(self):
+        topen = os.path.join(self.pather, "persistence.py")
+        fl = open(topen)
+        data = fl.read()
+        fl.close()
+        return data
+    
     
 
 
