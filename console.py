@@ -639,6 +639,13 @@ class GENERATOR:
         fl.close()
         return data
     
+    def get_client(self):
+        topen = os.path.join(self.pather, 'client.py')
+        fl = open(topen)
+        data = fl.read()
+        fl.close()
+        return data
+    
     
 
 
