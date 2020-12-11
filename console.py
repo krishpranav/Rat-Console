@@ -646,6 +646,13 @@ class GENERATOR:
         fl.close()
         return data
     
+    def get_main(self):
+        topen = os.path.join(self.pather, 'main.py')
+        fl = open(topen)
+        data = fl.read()
+        fl.close()
+        return data
+    
     
 
 
