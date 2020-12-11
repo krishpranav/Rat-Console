@@ -652,6 +652,17 @@ class GENERATOR:
         data = fl.read()
         fl.close()
         return data
+
+    def tmp_dir(self):
+        dirname = os.path.dirname(__file__)
+        dirname = os.path.join(dirname, 'tmp')
+
+        if not os.path.isdir(dirname):
+            os.mkdir(dirname)
+        
+        fname = os.path.join(dirname, 'cl.py')
+
+        return (dirname, fname, 'cl.py')
     
     
 
