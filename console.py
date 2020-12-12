@@ -717,4 +717,7 @@ class GENERATOR:
         sys.stdout.write("\n")
         pull.print("Compiled SuccessFully!")
 
-    
+    def clean(self):
+        pull.function("Cleaning files and temporary codes")
+        shutil.rmtree(self.flname[0])
+        pull.print("File: " + self.output)
