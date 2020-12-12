@@ -709,7 +709,8 @@ class GENERATOR:
         t.daemon = True
         t.start()
         
-
+        while t.is_alive():
+            sys.stdout.write("\r" + pull.BLUE + "[" + pull.UNDERLINE + ":" + pull.END + pull.BLUE + "]" + pull.END + "Elapsed Time: %is" % (counter) + pull.END)  
 
 
     
