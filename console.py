@@ -713,6 +713,8 @@ class GENERATOR:
             sys.stdout.write("\r" + pull.BLUE + "[" + pull.UNDERLINE + ":" + pull.END + pull.BLUE + "]" + pull.END + "Elapsed Time: %is" % (counter) + pull.END)  
             time.sleep(2)
             counter += 1
-            
+        
+        sys.stdout.write("\n")
+        pull.print("Compiled SuccessFully!")
 
     
