@@ -734,4 +734,10 @@ class PARSER:
         if self.mode == "bind":
             self.address = self.v_address(prs.address)
             self.port    = self.v_port(prs.port)
+        elif self.mode == "generate":
+            self.address = self.v_address(prs.address)
+            self.port    = self.v_port(prs.port)
+            self.output  = self.v_output(prs.output)
+            self.source  = prs.source
+            self.persistence = prs.persistence
         
