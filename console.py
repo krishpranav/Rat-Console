@@ -706,7 +706,7 @@ class GENERATOR:
             '--workpath=%s' % self.flname[0],
             os.path.join(self.flname[0], self.flname[2])
         ],),)
-        t.daemon = True
+        t.daemon = True 
         t.start()
         
         while t.is_alive():
@@ -720,4 +720,13 @@ class GENERATOR:
     def clean(self):
         pull.function("Cleaning files and temporary codes")
         shutil.rmtree(self.flname[0])
-        pull.print("File: " + self.output)
+        pull.print("File: " + self.output)        
+
+
+class PARSER:
+
+    COMMANDS = ['bind', 'generate']
+
+    def __init__(self, prs):
+        self.mode  = self.v_mode(prs.mode, prs.help)
+        self.help  = self.v_help(prs.help)
