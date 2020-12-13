@@ -730,3 +730,8 @@ class PARSER:
     def __init__(self, prs):
         self.mode  = self.v_mode(prs.mode, prs.help)
         self.help  = self.v_help(prs.help)
+
+        if self.mode == "bind":
+            self.address = self.v_address(prs.address)
+            self.port    = self.v_port(prs.port)
+        
