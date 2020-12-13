@@ -740,4 +740,16 @@ class PARSER:
             self.output  = self.v_output(prs.output)
             self.source  = prs.source
             self.persistence = prs.persistence
+    
+    def v_help(self, h1):
+        if h1:
+            if not self.mode:
+                pull.help_overall()
+            else:
+                if self.mode == "bind":
+                    pull.help_bind()
+                elif self.mode == "generate":
+                    pull.help_generate()
+                else:
+                    pull.help_help()
         
