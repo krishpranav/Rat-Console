@@ -752,4 +752,7 @@ class PARSER:
                     pull.help_generate()
                 else:
                     pull.help_help()
+    
+    def v_address(self, str):
+        return str
         
