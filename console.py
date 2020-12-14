@@ -774,6 +774,6 @@ class PARSER:
                 pull.exit("No such command found in database")
         else:
             if not h1:
-                pull.exit("Invalid Syntax!")
+                pull.exit("Invalid Syntax")
 
         
