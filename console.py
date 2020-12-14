@@ -755,4 +755,15 @@ class PARSER:
     
     def v_address(self, str):
         return str
+    
+
+    def v_port(self, port):
+        if not port:
+            pull.exit("You need to supply a valid port number")
+
+        if port <= 0 or port > 65535:
+            pull.exit("Invalid port number")
+        
+        return port
+        
         
