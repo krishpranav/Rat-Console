@@ -477,7 +477,7 @@ class COMMCENTER:
         sys.stdout.write("\n")
         pull.exit("Exiting...\n")
 
-class INTERFACE(COMMCENTER):    
+class INTERFACE(COMMCENTER):
 
     
     SOCKET = None
@@ -775,7 +775,8 @@ class PARSER:
         else:
             if not h1:
                 pull.exit("Invalid Syntax")
-    
+
+
     def v_output(self, val):
         if val:
             if os.path.isdir(os.path.dirname(val)):
@@ -784,5 +785,6 @@ class PARSER:
                 pull.exit("Directory doesn't exist!")
         else:
             pull.exit("You must provide an output Path!")
+
 
         
