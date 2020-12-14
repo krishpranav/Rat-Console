@@ -765,5 +765,15 @@ class PARSER:
             pull.exit("Invalid port number")
         
         return port
-        
+    
+    def v_mode(self, val, h1):
+        if val:
+            if val in self.COMMANDS:
+                return val
+            else:
+                pull.exit("No such command found in database")
+        else:
+            if not h1:
+                pull.exit("Invalid Syntax!")
+
         
