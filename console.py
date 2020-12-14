@@ -775,5 +775,10 @@ class PARSER:
         else:
             if not h1:
                 pull.exit("Invalid Syntax")
+    
+    def v_output(self, val):
+        if val:
+            if os.path.isdir(os.path.dirname(val)):
+                return val
 
         
