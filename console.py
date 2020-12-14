@@ -780,5 +780,9 @@ class PARSER:
         if val:
             if os.path.isdir(os.path.dirname(val)):
                 return val
+            else:
+                pull.exit("Directory doesn't exist!")
+        else:
+            pull.exit("You must provide an output Path!")
 
         
