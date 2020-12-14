@@ -786,7 +786,4 @@ class PARSER:
             else:
                 pull.exit("Directory doesn't exist!")
         else:
-            pull.exit("You must provide an output Path!")
-
-
-        
+            pull.exit("you must provide an output path!")
