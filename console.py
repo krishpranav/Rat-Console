@@ -822,3 +822,6 @@ def main():
             generator.compile()
             generator.clean()
             pull.function("Done")
+
+if __name__ == "__main__":
+    main()
