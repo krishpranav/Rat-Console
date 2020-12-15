@@ -812,3 +812,13 @@ def main():
         iface.accept()
         iface.launch()
         iface.close()
+    elif parser.mode == "generate":
+        pull.function("Starting Generating Mode!")
+        generator = GENERATOR(parser)
+        if generator.source:
+            generator.patch()
+        else:
+            generator.generate()
+            generator.compile()
+            generator.clean()
+            pull.function("Done")
