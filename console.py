@@ -638,13 +638,14 @@ class GENERATOR:
         data = fl.read()
         fl.close()
         return data
-    
+
     def get_client(self):
         topen = os.path.join(self.pather, 'client.py')
         fl = open(topen)
         data = fl.read()
         fl.close()
         return data
+
     
     def get_main(self):
         topen = os.path.join(self.pather, 'main.py')
@@ -659,7 +660,7 @@ class GENERATOR:
 
         if not os.path.isdir(dirname):
             os.mkdir(dirname)
-        
+
         fname = os.path.join(dirname, 'cl.py')
 
         return (dirname, fname, 'cl.py')
