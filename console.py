@@ -785,7 +785,7 @@ class PARSER:
             else:
                 pull.exit("Directory doesn't exist!")
         else:
-            pull.exit("you must provide an output path!")
+            pull.exit("You must provide an output path!")
 
 def main():
     pull.logo()
@@ -820,7 +820,7 @@ def main():
             generator.generate()
             generator.compile()
             generator.clean()
-            pull.function("Done")
+            pull.function("Done!")
 
 if __name__ == "__main__":
     main()
