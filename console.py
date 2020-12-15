@@ -805,3 +805,10 @@ def main():
     parser = parser.parse_args()
 
     parser = PARSER(parser)
+
+    if parser.mode == "bind":
+        iface = INTERFACE(parser)
+        iface.bind()
+        iface.accept()
+        iface.launch()
+        iface.close()
