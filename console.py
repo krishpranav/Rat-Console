@@ -792,3 +792,10 @@ def main():
     pull.logo()
 
     parser = argparse.ArgumentParser(add_help=False)
+
+    parser.add_argument('mode', nargs="?", help="Moder")
+    parser.add_argument('-h', '--help', dest="help", default=False, action="store_true", help="Help Manual")
+    parser.add_argument('-a', '--address', dest="address", default="", type=str, help="Address to Bind to")
+    parser.add_argument('-p', '--port', dest="port", default=0, type=int, help="Port to Bind to")
+    parser.add_argument('-o', '--output', dest="output", default="", type=str, help="Complete Path to Output File!")
+    parser.add_argument('-s', '--source', dest="source", default=False, action="store_true", help="Source file")
