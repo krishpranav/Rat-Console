@@ -787,3 +787,8 @@ class PARSER:
                 pull.exit("Directory doesn't exist!")
         else:
             pull.exit("you must provide an output path!")
+
+def main():
+    pull.logo()
+
+    parser = argparse.ArgumentParser(add_help=False)
