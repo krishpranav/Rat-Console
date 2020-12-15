@@ -804,3 +804,5 @@ def main():
 
     parser = parser.parse_args()
 
+    parser = PARSER(parser)
+
