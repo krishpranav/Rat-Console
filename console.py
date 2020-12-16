@@ -778,7 +778,6 @@ class PARSER:
             if not h1:
                 pull.exit("Invalid Syntax")
 
-
     def v_output(self, val):
         if val:
             if os.path.isdir(os.path.dirname(val)):
@@ -822,6 +821,7 @@ def main():
             generator.compile()
             generator.clean()
             pull.function("Done!")
+
 
 if __name__ == "__main__":
     main()
