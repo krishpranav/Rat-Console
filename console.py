@@ -383,7 +383,7 @@ class COMMCENTER:
     def c_shell(self):
         result = ""
         if self.CURRENT:
-            sys.stdout.write("\n")`                                                                                                                                 -                                                                                                                           
+            sys.stdout.write("\n")                                                                                                                                -
             while True:
                 val = input("# ")
                 val = "shell:" + val.rstrip(" ").lstrip(" ")
@@ -767,7 +767,7 @@ class PARSER:
 
 
         return port
-    
+
     def v_mode(self, val, h1):
         if val:
             if val in self.COMMANDS:
