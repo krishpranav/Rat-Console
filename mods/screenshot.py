@@ -6,5 +6,9 @@ class SCREENSHOT:
         self.generate()
 
 
+    def generate(self):
+        obj = io.BytesIO()
+
+
     def get_data(self):
         return self.SC_DATA
