@@ -8,6 +8,9 @@ class SCREENSHOT:
 
     def generate(self):
         obj = io.BytesIO()
+        im = pyscreenshot.grab()
+        im.save(obj, format="PNG")
+        self.SC_DATA = obj.getvalue()
 
 
     def get_data(self):
