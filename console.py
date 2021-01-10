@@ -22,8 +22,6 @@ import platform
 import PyInstaller.__main__
 from datetime import datetime
 
-
-
 __LOGO__ = """
          %s RAT 
 """
