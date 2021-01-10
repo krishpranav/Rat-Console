@@ -343,16 +343,15 @@ class COMMCENTER:
                 pull.help_c_current()
             else:
                 pull.help_c_general()
-
+    
     def get_valid(self, _id):
-        for client in self.CLIENTS:
+        for client in self.CLIENT:
             if client[0] == int(_id):
                 return client
-
         return False
-
+    
     def c_ping(self, _id):
-        return
+        return 
 
     def c_connect(self, args):
         if len(args) == 2:
