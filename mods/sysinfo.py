@@ -10,3 +10,10 @@ class SYSINFO:
         self.disk_info = self.get_disk_info()
         self.net_info = self.get_net_info()
         
+    def get_size(self, bolter, suffix="B"):
+        factor = 1024
+        for unit in ["", "K", "M", "G", "T", "P"]:
+            if bolter < factor:
+                return f"{bolter:.2f}{unit}{suffix}"
+
+            bolter /= factor
