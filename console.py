@@ -265,11 +265,12 @@ class CLIENT:
     STATUS  = "Active"
     MESSAGE = ""
     KEY     = ")J@NcRfU"
-
+    
     def __init__(self, sock, addr):
-        self.sock     = sock
-        self.ip       = addr[0]
-        self.port     = addr[1]
+        self.sock      = sock
+        self.ip        = addr[0]
+        self.port      = addr[1]
+
 
     def acceptor(self):
         data = ""
