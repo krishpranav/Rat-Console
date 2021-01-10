@@ -311,6 +311,7 @@ class CLIENT:
         self.MESSAGE = ""
         return rtval
 
+
 class COMMCENTER:
 
     CLIENTS = []
