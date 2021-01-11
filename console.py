@@ -489,7 +489,9 @@ class INTERFACE(COMMCENTER):
     SOCKET = None
     RUNNER = True
 
-        
+    def __init__(self, prs):
+        self.address = prs.address
+        self.port    = prs.port
      
     def bind(self):
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
