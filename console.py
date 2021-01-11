@@ -43,7 +43,7 @@ __HELP_BIND__   = """usage: python3 console.py bind [--address ADDRESS] [--port 
     Args              Description
     -h, --help        Show Help for Bind command
     -a, --address     IP Address to Bind to
-    -p, --port        Port Number on which to Bind
+    -p, --port        Port Number On Which To Bind
 
 The Bind command is used to bind the application on server
 for incoming connections and control the clients through
