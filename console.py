@@ -489,7 +489,7 @@ class INTERFACE(COMMCENTER):
     SOCKET = None
     RUNNER = True
 
-    
+        
      
     def bind(self):
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
