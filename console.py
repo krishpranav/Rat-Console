@@ -1,6 +1,6 @@
 #!usr/bin/env/python
 '''
-A python rat
+A rat made using python
 Note this tool is under development
 github link: https://www.github.com/krishpranav
 follow me on github :)
