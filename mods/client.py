@@ -117,8 +117,4 @@ class CLIENT:
                 continue
 
             self.acceptor()
-
-
-
- 
                 
