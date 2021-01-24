@@ -524,7 +524,7 @@ class INTERFACE(COMMCENTER):
                 self.COUNTER,
                 client
             )
-    
+
     def accept(self):
         t = threading.Thread(target=self.accept_threads)
         t.daemon = True
