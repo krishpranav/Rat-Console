@@ -407,7 +407,7 @@ class COMMCENTER:
             sys.stdout.write("\n")
             pull.error("You need to connect to client before execute this command")
             sys.stdout.write("\n")
-
+    
     def c_clear(self):
         subprocess.call(["clear"], shell=True)
 
