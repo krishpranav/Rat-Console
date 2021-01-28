@@ -750,6 +750,7 @@ class PARSER:
             self.persistence = prs.persistence
     
 
+
     def v_help(self, h1):
         if h1:
             if not self.mode:
@@ -771,7 +772,7 @@ class PARSER:
             pull.exit("you need to supply a valid port number")
 
         if port <= 0 or port > 65535:
-            pull.exit("Invalid port number")
+            pull.exit("Invalid Port Number")
 
     def v_mode(self, val, h1):
         if val:
