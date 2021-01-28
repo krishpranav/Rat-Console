@@ -6,4 +6,5 @@
 - cd Rat-Console
 - sudo chmod +x *
 - bash install.sh
+- python3 console.py 
 
