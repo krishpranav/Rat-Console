@@ -293,11 +293,11 @@ class CLIENT:
 
                     
 
-
     def engage(self):
         t = threading.Thread(target=self.acceptor)
         t.daemon = True
         t.start()
+
 
     def send_data(self, val):
         self.sock.send(base64.encodebytes(val.encode('utf-8')) + self.KEY.encode('utf-8'))
