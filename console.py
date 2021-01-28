@@ -251,7 +251,7 @@ class PULL:
         global __HELP_BIND__
         print(__HELP_BIND__)
         sys.exit(0)
-
+    
     def help_generate(self):
         global __HELP_GENERATE__
         print(__HELP_GENERATE__)
