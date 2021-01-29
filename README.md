@@ -14,3 +14,8 @@
 - sudo chmod +x *
 - bash install.sh
 - python3 console.py
+
+# Steps to run this tool on android
+- pkg update
+- pkg install python3
+- pkg install python3-pip
