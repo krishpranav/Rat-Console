@@ -19,3 +19,8 @@
 - pkg update
 - pkg install python3
 - pkg install python3-pip
+- git clone https://github.com/krishpranav/Rat-Console
+- cd Rat-Console
+- sudo chmod +x *
+- bash install.sh
+- python3 console.py
