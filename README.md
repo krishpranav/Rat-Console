@@ -21,6 +21,6 @@
 - pkg install python3-pip
 - git clone https://github.com/krishpranav/Rat-Console
 - cd Rat-Console
-- sudo chmod +x *
+- chmod +x *
 - bash install.sh
 - python3 console.py
