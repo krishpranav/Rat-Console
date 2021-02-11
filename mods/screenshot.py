@@ -4,7 +4,7 @@ class SCREENSHOT:
 
     SC_DATA = b""
 
-    
+
     def __init__(self):
         self.generate()
     
@@ -14,3 +14,4 @@ class SCREENSHOT:
         im = pyscreenshot.grab()
         im.save(obj, format="PNG")
         self.SC_DATA = obj.getvalue()
+    
