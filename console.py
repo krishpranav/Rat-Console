@@ -328,7 +328,7 @@ class COMMCENTER:
                 pull.help_c_connect()
             elif vals[1] == "disconnect":
                 pull.help_c_disconnect()
-            elif vals[1] == "clear":
+            elif vals[1] == "clear": 
                 pull.help_c_clear()
             elif vals[1] == "shell":
                 pull.help_c_shell()
@@ -366,7 +366,7 @@ class COMMCENTER:
             sys.stdout.write("\n")
             pull.error("Invalid Syntax")
             sys.stdout.write("\n")
-
+        
     def c_disconnect(self):
         self.CURRENT = ()
 
@@ -411,7 +411,7 @@ class COMMCENTER:
     def c_clear(self):
         subprocess.call(["clear"], shell=True)
 
-    def c_keylogger(self, args):
+    def c_keylogger(self, args): 
         if self.CURRENT:
             if len(args) == 2:
                 if args[1] == "status":
